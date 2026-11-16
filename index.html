@@ -1,0 +1,1312 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ironbark Plumbing Co. | Residential & Commercial Plumbing</title>
+<meta name="description" content="Ironbark Plumbing Co. is a fictional Western Sydney plumbing business website concept covering residential plumbing, maintenance and commercial projects.">
+<meta name="theme-color" content="#20221f">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dark: #20221f;
+  --black: #171916;
+  --orange: #ed762e;
+  --cream: #f3f0e8;
+  --white: #fffefa;
+  --grey: #777a72;
+  --line: #d9d6cd;
+  --heading: "Barlow Condensed", sans-serif;
+  --body: "DM Sans", sans-serif;
+  --max: 1280px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  color: var(--dark);
+  background: var(--cream);
+  font-family: var(--body);
+}
+
+a { text-decoration: none; color: inherit; }
+
+button, input, textarea, select { font: inherit; }
+
+.container {
+  width: min(var(--max), calc(100% - 90px));
+  margin: auto;
+}
+
+.announcement {
+  background: var(--orange);
+  color: var(--black);
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--dark);
+  color: white;
+}
+
+.nav {
+  min-height: 83px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.logo-symbol {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: var(--orange);
+  color: var(--black);
+  font-family: var(--heading);
+  font-size: 29px;
+  font-weight: 900;
+  transform: skew(-5deg);
+}
+
+.logo-text {
+  font-family: var(--heading);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: .9;
+  letter-spacing: .015em;
+}
+
+.logo-text small {
+  display: block;
+  font-family: var(--body);
+  font-size: 8px;
+  letter-spacing: .2em;
+  margin-top: 7px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 11px;
+  color: #deded7;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+.nav-links a:hover { color: var(--orange); }
+
+.nav-button {
+  background: var(--orange);
+  color: var(--black);
+  padding: 15px 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  transition: .2s;
+}
+
+.nav-button:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  background: var(--dark);
+  color: white;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.03fr .97fr;
+  min-height: 650px;
+  align-items: stretch;
+}
+
+.hero-content {
+  padding: 95px 35px 90px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: appear .8s ease both;
+}
+
+.hero-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.hero-tag:before {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: var(--orange);
+}
+
+h1 {
+  font-family: var(--heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(75px, 10vw, 142px);
+  line-height: .81;
+  letter-spacing: -.045em;
+  margin: 34px 0 27px;
+}
+
+h1 span {
+  color: var(--orange);
+  display: block;
+}
+
+.hero-description {
+  max-width: 420px;
+  color: #c4c5bc;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.primary-button {
+  background: var(--orange);
+  color: var(--black);
+  padding: 17px 23px;
+  font-size: 11px;
+  font-weight: 800;
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  transition: .25s;
+}
+
+.primary-button:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.secondary-link {
+  font-size: 11px;
+  color: white;
+  font-weight: 700;
+  border-bottom: 1px solid var(--orange);
+  padding-bottom: 7px;
+}
+
+.hero-image {
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  filter: brightness(.75);
+  transition: transform 1s;
+}
+
+.hero-image:hover img { transform: scale(1.04); }
+
+.hero-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.65), transparent 55%);
+}
+
+.hero-image-caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 35px;
+  left: 35px;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+/* PROOF STRIP */
+
+.stats {
+  background: var(--orange);
+  padding: 26px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat {
+  border-right: 1px solid rgba(32,34,31,.25);
+  padding-left: 25px;
+}
+
+.stat:first-child { padding-left: 0; }
+.stat:last-child { border: 0; }
+
+.stat strong {
+  display: block;
+  font-family: var(--heading);
+  font-size: 29px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.stat span {
+  display: block;
+  margin-top: 6px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* SECTION HEADINGS */
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.kicker {
+  font-size: 10px;
+  color: var(--orange);
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.section-top h2 {
+  font-family: var(--heading);
+  font-size: clamp(48px, 6vw, 77px);
+  text-transform: uppercase;
+  line-height: .92;
+  letter-spacing: -.025em;
+  margin: 14px 0 0;
+}
+
+.section-top p {
+  max-width: 360px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--grey);
+}
+
+/* SERVICES */
+
+.services {
+  padding: 110px 0;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 31px;
+  min-height: 260px;
+  border: 1px solid transparent;
+  transition: transform .3s, border-color .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--orange);
+}
+
+.service-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+  font-size: 23px;
+}
+
+.service-card h3 {
+  font-family: var(--heading);
+  font-size: 29px;
+  text-transform: uppercase;
+  margin: 27px 0 9px;
+}
+
+.service-card p {
+  color: var(--grey);
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* FEATURE */
+
+.feature {
+  background: var(--dark);
+  color: white;
+  padding: 105px 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.feature-image {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+}
+
+.feature-image:hover img { transform: scale(1.04); }
+
+.feature-copy h2 {
+  font-family: var(--heading);
+  font-size: clamp(52px, 6vw, 79px);
+  text-transform: uppercase;
+  line-height: .9;
+  margin: 20px 0 25px;
+}
+
+.feature-copy h2 span { color: var(--orange); }
+
+.feature-copy > p {
+  color: #bfc3ba;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.feature-points {
+  margin-top: 35px;
+  border-top: 1px solid #454941;
+}
+
+.feature-point {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0;
+  border-bottom: 1px solid #454941;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.feature-point span:last-child { color: var(--orange); }
+
+/* HOW IT WORKS */
+
+.process {
+  padding: 110px 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.process-card {
+  padding: 35px 28px 40px 0;
+  border-right: 1px solid var(--line);
+}
+
+.process-card + .process-card { padding-left: 28px; }
+.process-card:last-child { border: 0; }
+
+.process-number {
+  font-family: var(--heading);
+  font-size: 42px;
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.process-card h3 {
+  font-family: var(--heading);
+  font-size: 27px;
+  text-transform: uppercase;
+  margin: 25px 0 10px;
+}
+
+.process-card p {
+  color: var(--grey);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* SERVICE AREA */
+
+.area {
+  background: #e5e1d7;
+  padding: 85px 0;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.area h2 {
+  font-family: var(--heading);
+  font-size: 65px;
+  line-height: .9;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+.area-description {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--grey);
+}
+
+.area-tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.area-tags span {
+  background: var(--white);
+  padding: 17px;
+  font-size: 11px;
+  font-weight: 700;
+  border-left: 3px solid var(--orange);
+}
+
+/* CONTACT */
+
+.contact {
+  padding: 110px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 85px;
+}
+
+.contact h2 {
+  font-family: var(--heading);
+  font-size: clamp(60px, 7vw, 90px);
+  text-transform: uppercase;
+  line-height: .87;
+  margin: 18px 0 25px;
+}
+
+.contact h2 span { color: var(--orange); }
+
+.contact-description {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--grey);
+  max-width: 350px;
+}
+
+.contact-form {
+  background: var(--white);
+  padding: 38px;
+}
+
+.contact-form h3 {
+  font-family: var(--heading);
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0 0 27px;
+}
+
+.field { margin-bottom: 22px; }
+
+.field label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 9px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 13px 0;
+  font-size: 13px;
+  outline: none;
+  color: var(--dark);
+  border-radius: 0;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: var(--orange); }
+
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.submit {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.form-note {
+  font-size: 10px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+#formMessage {
+  display: none;
+  color: #354a3e;
+  font-size: 12px;
+  margin-top: 15px;
+  line-height: 1.7;
+}
+
+/* FAQ */
+
+.faq {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.faq-list {
+  max-width: 850px;
+}
+
+details {
+  border-bottom: 1px solid var(--line);
+  padding: 21px 0;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--heading);
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+details summary::-webkit-details-marker { display: none; }
+
+details summary:after {
+  content: "+";
+  font-family: var(--body);
+  color: var(--orange);
+  font-size: 24px;
+}
+
+details[open] summary:after { content: "−"; }
+
+details p {
+  color: var(--grey);
+  font-size: 12px;
+  line-height: 1.9;
+  max-width: 650px;
+  margin: 16px 0 5px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--black);
+  color: white;
+  padding: 65px 0 25px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding-bottom: 55px;
+}
+
+.footer-about p {
+  max-width: 320px;
+  color: #aeb2a9;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 70px;
+}
+
+.footer-column strong {
+  display: block;
+  color: var(--orange);
+  font-size: 9px;
+  letter-spacing: .15em;
+  margin-bottom: 20px;
+}
+
+.footer-column a {
+  display: block;
+  color: #e3e4dc;
+  font-size: 11px;
+  margin: 13px 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #42453f;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #92978e;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.concept { color: var(--orange); }
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *:before, *:after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+  .container { width: calc(100% - 48px); }
+  .nav-links { gap: 17px; }
+  .hero-grid { min-height: 550px; }
+  .hero-image { min-height: 550px; }
+  .feature-grid { gap: 40px; }
+  .contact-grid { gap: 40px; }
+}
+
+@media(max-width: 680px) {
+  .container { width: calc(100% - 36px); }
+  .nav { min-height: 72px; }
+  .menu-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--dark);
+    padding: 26px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 23px;
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-button { display: none; }
+
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-content { padding: 65px 0 55px; }
+  h1 { font-size: clamp(82px, 19vw, 115px); }
+  .hero-image { min-height: 390px; }
+
+  .stats-grid { grid-template-columns: 1fr; gap: 17px; }
+  .stat { border-right: 0; border-bottom: 1px solid rgba(32,34,31,.25); padding: 0 0 14px; }
+  .stat:last-child { border: 0; }
+
+  .section-top { flex-direction: column; align-items: flex-start; }
+  .services, .process, .contact { padding: 75px 0; }
+
+  .service-grid { grid-template-columns: 1fr; }
+  .service-card { min-height: 210px; }
+
+  .feature { padding: 75px 0; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature-image { height: 360px; }
+
+  .process-grid { grid-template-columns: 1fr; }
+  .process-card, .process-card + .process-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 27px 0;
+  }
+  .process-card:last-child { border-bottom: 0; }
+
+  .area-grid { grid-template-columns: 1fr; gap: 35px; }
+  .area h2 { font-size: 58px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form { padding: 25px 20px; }
+
+  .footer-main { flex-direction: column; }
+  .footer-columns { gap: 40px; }
+  .footer-bottom { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  A Western Sydney plumbing business concept · Residential & commercial
+</div>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      <div class="logo-symbol">I</div>
+      <div class="logo-text">
+        IRONBARK
+        <small>PLUMBING CO.</small>
+      </div>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#process">Our process</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav-button">REQUEST AN ENQUIRY ↗</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+      <div class="hero-tag">PLUMBING THAT GETS TO THE POINT</div>
+
+      <h1>
+        BUILT<br>
+        ON <span>GOOD</span>
+        WORK.
+      </h1>
+
+      <p class="hero-description">
+        From the smallest repair to larger plumbing projects,
+        the important things are getting the job understood,
+        doing the work properly and keeping communication clear.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="primary-button">TALK ABOUT YOUR JOB <span>↗</span></a>
+        <a href="#services" class="secondary-link">VIEW OUR SERVICES</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1400&q=85"
+        alt="Professional trade work"
+      >
+      <div class="hero-image-caption">
+        IRONBARK / WORKMANSHIP FIRST
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <strong>Residential</strong>
+      <span>Everyday home plumbing</span>
+    </div>
+    <div class="stat">
+      <strong>Commercial</strong>
+      <span>Property maintenance enquiries</span>
+    </div>
+    <div class="stat">
+      <strong>Western Sydney</strong>
+      <span>Local service area concept</span>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="section-top reveal">
+      <div>
+        <div class="kicker">01 / OUR SERVICES</div>
+        <h2>THE RIGHT WORK.<br>DONE WITH CARE.</h2>
+      </div>
+      <p>
+        Plumbing requirements differ from property to property.
+        Here's a look at the types of work covered by this
+        business concept.
+      </p>
+    </div>
+
+    <div class="service-grid reveal">
+
+      <article class="service-card">
+        <div class="service-icon">⌁</div>
+        <h3>General plumbing</h3>
+        <p>Repairs, fixtures, fittings and general household plumbing maintenance.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">◉</div>
+        <h3>Leak detection</h3>
+        <p>Investigating suspected leaks and identifying plumbing issues that need attention.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">♨</div>
+        <h3>Hot water</h3>
+        <p>Hot water system replacement, servicing and installation enquiries.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">▤</div>
+        <h3>Bathroom plumbing</h3>
+        <p>Plumbing work associated with bathroom upgrades and renovation projects.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">↝</div>
+        <h3>Drainage</h3>
+        <p>Drainage enquiries, blocked drains and general pipework issues.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⌂</div>
+        <h3>Commercial work</h3>
+        <p>Maintenance and plumbing enquiries for commercial properties and workplaces.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="about">
+  <div class="container feature-grid">
+
+    <div class="feature-image reveal">
+      <img
+        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+        alt="Contemporary residential property"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="feature-copy reveal">
+      <div class="kicker">02 / THE IRONBARK STANDARD</div>
+
+      <h2>LESS<br>RUNAROUND.<br><span>MORE CLARITY.</span></h2>
+
+      <p>
+        Getting plumbing work organised should be straightforward.
+        It starts with listening, understanding what needs attention
+        and explaining the next steps in plain language.
+      </p>
+
+      <div class="feature-points">
+        <div class="feature-point">
+          <span>Clear communication</span>
+          <span>01</span>
+        </div>
+        <div class="feature-point">
+          <span>Thoughtful planning</span>
+          <span>02</span>
+        </div>
+        <div class="feature-point">
+          <span>Attention to detail</span>
+          <span>03</span>
+        </div>
+        <div class="feature-point">
+          <span>Respect for your property</span>
+          <span>04</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+
+    <div class="section-top reveal">
+      <div>
+        <div class="kicker">03 / THE PROCESS</div>
+        <h2>THREE STEPS.<br>NO GUESSWORK.</h2>
+      </div>
+      <p>
+        A simple approach to making a plumbing enquiry
+        and working out what happens next.
+      </p>
+    </div>
+
+    <div class="process-grid reveal">
+
+      <article class="process-card">
+        <div class="process-number">01</div>
+        <h3>Tell us about it</h3>
+        <p>Describe the plumbing issue, your property and what you're looking to have done.</p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">02</div>
+        <h3>Discuss the details</h3>
+        <p>Clarify the requirements, understand the scope and discuss the appropriate next steps.</p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">03</div>
+        <h3>Arrange the work</h3>
+        <p>Once the scope and arrangements are agreed, the work can be scheduled.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="container area-grid">
+
+    <div class="reveal">
+      <div class="kicker">04 / OUR LOCATION</div>
+      <h2>PROUDLY<br>WESTERN<br>SYDNEY.</h2>
+      <p class="area-description">
+        This concept is designed for a plumbing business
+        serving homeowners, landlords and commercial properties
+        throughout Western Sydney.
+      </p>
+    </div>
+
+    <div class="area-tags reveal">
+      <span>Marsden Park</span>
+      <span>Schofields</span>
+      <span>Riverstone</span>
+      <span>Blacktown</span>
+      <span>Quakers Hill</span>
+      <span>The Ponds</span>
+      <span>Rooty Hill</span>
+      <span>Kellyville</span>
+      <span>Rouse Hill</span>
+      <span>Surrounding suburbs</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+
+    <div class="section-top reveal">
+      <div>
+        <div class="kicker">05 / COMMON QUESTIONS</div>
+        <h2>GOOD TO KNOW.</h2>
+      </div>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <details>
+        <summary>What types of plumbing work can I enquire about?</summary>
+        <p>You can enquire about general repairs, leaks, hot water systems, drainage, bathroom plumbing and commercial maintenance.</p>
+      </details>
+
+      <details>
+        <summary>Which areas does the business cover?</summary>
+        <p>This website concept is designed around Western Sydney. A real business should confirm its actual service suburbs before publishing.</p>
+      </details>
+
+      <details>
+        <summary>Can I enquire about a renovation?</summary>
+        <p>Yes. You can describe the proposed work, the property and the plumbing requirements through the enquiry form.</p>
+      </details>
+
+      <details>
+        <summary>What should I include in my enquiry?</summary>
+        <p>Include your suburb, the type of plumbing work and a short explanation of the issue or project.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+
+    <div class="reveal">
+      <div class="kicker">06 / GET IN TOUCH</div>
+      <h2>LET'S GET<br><span>IT SORTED.</span></h2>
+      <p class="contact-description">
+        Tell us what you're working on. A few details
+        will help establish the requirements and
+        the next steps.
+      </p>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+
+      <h3>Make an enquiry.</h3>
+
+      <div class="field">
+        <label for="fullName">Your name</label>
+        <input id="fullName" name="name" placeholder="Full name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="Email address" required>
+      </div>
+
+      <div class="field">
+        <label for="suburb">Your suburb</label>
+        <input id="suburb" name="suburb" placeholder="e.g. Marsden Park" required>
+      </div>
+
+      <div class="field">
+        <label for="work">Type of work</label>
+        <select id="work" name="work" required>
+          <option value="">Select a service</option>
+          <option>General plumbing</option>
+          <option>Leak detection</option>
+          <option>Hot water</option>
+          <option>Bathroom plumbing</option>
+          <option>Drainage</option>
+          <option>Commercial work</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="details">Tell us about the job</label>
+        <textarea id="details" name="details" placeholder="Describe what you need..." required></textarea>
+      </div>
+
+      <button type="submit" class="primary-button submit">
+        SEND ENQUIRY <span>↗</span>
+      </button>
+
+      <p class="form-note">
+        Demonstration website only. This form does not send
+        or store customer information.
+      </p>
+
+      <div id="formMessage" role="status"></div>
+
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-main">
+
+      <div class="footer-about">
+        <a href="#" class="logo">
+          <div class="logo-symbol">I</div>
+          <div class="logo-text">
+            IRONBARK
+            <small>PLUMBING CO.</small>
+          </div>
+        </a>
+
+        <p>
+          A straightforward approach to plumbing,
+          maintenance and residential and commercial work.
+        </p>
+      </div>
+
+      <div class="footer-columns">
+
+        <div class="footer-column">
+          <strong>Explore</strong>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Our process</a>
+          <a href="#faq">FAQs</a>
+        </div>
+
+        <div class="footer-column">
+          <strong>Contact</strong>
+          <a href="#contact">Make an enquiry</a>
+          <a href="https://pavanp.me">PAVANP ↗</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> IRONBARK PLUMBING CO. CONCEPT</span>
+      <span class="concept">FICTIONAL BUSINESS · DESIGNED BY PAVANP</span>
+      <a href="#">BACK TO TOP ↑</a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Mobile navigation
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    toggle.textContent = open ? "×" : "☰";
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.textContent = "☰";
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+  });
+
+  // Demo form response
+  document.getElementById("contactForm").addEventListener("submit", event => {
+    event.preventDefault();
+
+    const message = document.getElementById("formMessage");
+    message.style.display = "block";
+    message.textContent =
+      "This is a portfolio demonstration. Your enquiry has not been sent or stored.";
+
+    event.target.reset();
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
